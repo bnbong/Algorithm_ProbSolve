@@ -1,5 +1,5 @@
 # Algorithm_ProvSolve
-repository for baekjoon &amp; etc algorithm solve 
+repository for algorithm solving
 
 ## branching
 make new remote branch
