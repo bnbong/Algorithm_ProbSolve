@@ -19,6 +19,6 @@ def prob_5355():
         results.append(number)
 
     for number in results:
-        print(round(number, 2))
+        print(format(round(number, 2), ".2f"))
 
 prob_5355()
