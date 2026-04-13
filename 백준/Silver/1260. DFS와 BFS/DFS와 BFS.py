@@ -1,62 +1,45 @@
-from collections import deque
+import sys
+import copy
+from collections import defaultdict, deque
 
-
-def bfs(graph, start):
-    visited = set()
-    queue = deque([start])
-
-    while queue:
-        node = queue.popleft()
-
-        if node not in visited:
-            print(node, end=' ')
-            if start not in graph:
-                return visited
-            visited.add(node)
-            queue.extend(graph[node])
-
-    return visited
-
-
-def dfs(graph, start, visited=None):
-    if visited is None:
-        visited = set()
-    print(start, end=' ')
-
-    if start not in graph:
-        return visited
-    visited.add(start)
-
-    for neighbor in graph[start]:
-        if neighbor not in visited:
-            dfs(graph, neighbor, visited)
-
-    return visited
-
-
-graph = dict()
+input = sys.stdin.readline
 
 N, M, V = map(int, input().split())
 
+graphs = defaultdict(list)
+
+
+def dfs(start, graph, visited=[False]*(N+1)):
+    visited[start] = True
+    print(start, end=" ")
+    for v in graph[start]:
+        if not visited[v]:
+            dfs(v, graph, visited)
+
+
+def bfs(start, graph, visited=[False]*(N+1)):
+    queue = deque([start])
+    visited[start] = True
+    while queue:
+        v = queue.popleft()
+        print(v, end=" ")
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+
+
 for _ in range(M):
     a, b = map(int, input().split())
+    graphs[a].append(b)
+    graphs[b].append(a)
 
-    if a not in graph:
-        graph[a] = [b]
-    else:
-        graph[a].append(b)
+for i in graphs:
+    graphs[i].sort()
 
-    if b not in graph:
-        graph[b] = [a]
-    else:
-        graph[b].append(a)
+graph_d = copy.deepcopy(graphs)
+graph_b = copy.deepcopy(graphs)
 
-sorted_graph = dict(sorted(graph.items()))
-for key in sorted_graph:
-    sorted_graph[key].sort()
-
-
-visited_dfs = dfs(graph, V)
+dfs(V, graph_d)
 print()
-visited_bfs = bfs(graph, V)
-
+bfs(V, graph_b)
