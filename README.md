@@ -1,23 +1,21 @@
-# Algorithm_ProvSolve
-repository for algorithm solving
+<p align="center">
+    <img align="top" width="70%" src="./python_gosu.png" alt="파이썬알고리즘고수가될거야!!!!"/>
+</p>
+<p align="center">
+<em><b>비엔봉의 코딩테스트 공부</b>: 알고리즘 GOSU가 될 거야</em>
+</p>
+<p align="center">
+<img src="https://img.shields.io/badge/Python-%233776ab.svg?style=flat&logo=python&logoColor=white" alt="Python"/>
+</p>
 
-## branching
-make new remote branch
- > git checkout -b [newbranch] & git push origin [newbranch]
+---
 
-fetching local branch with remote branch
- > git branch --set-upstream-to origin/[newbranch]
+~~백준(BOJ)~~(섭종), 프로그래머스(Programmers), SWEA, LeetCode에서 푼 문제가 업로드 되는 저장소 입니다.
 
-## Accessing inner terminal
- > getent hosts (check hosts)
- > zsh
- > ssh -t [host_gateway]
- > insert password
- > cd /home/bnbong/workspace/practice/...
+with grateful thanks to [백준 허브 (Baekjoon Hub)](https://github.com/BaekjoonHub/BaekjoonHub)
 
-## https certificate renewal
- > sudo certbot renew --dry-run
+---
 
-## accessing Docker PostgreSQL
- > docker exec -it postgres-container bash
- > psql -U postgres
+# 내 티어
+
+[![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=bnbong)](https://solved.ac/bnbong)
