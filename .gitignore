@@ -2,3 +2,15 @@
 solving.py
 venv/
 .DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+*.egg-info/
+dist/
