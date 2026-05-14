@@ -1,5 +1,5 @@
 <p align="center">
-    <img align="top" width="70%" src="./python_gosu.png" alt="파이썬알고리즘고수가될거야!!!!"/>
+    <img align="top" width="40%" src="./python_gosu.png" alt="파이썬알고리즘고수가될거야!!!!"/>
 </p>
 <p align="center">
 <em><b>비엔봉의 코딩테스트 공부</b>: 알고리즘 GOSU가 될 거야</em>
