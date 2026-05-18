@@ -16,6 +16,10 @@ with grateful thanks to [백준 허브 (Baekjoon Hub)](https://github.com/Baekjo
 
 ---
 
-# 내 티어
+# 내 티어 및 활동
 
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=bnbong)](https://solved.ac/bnbong)
+
+<a href="https://github.com/devxb/gitanimals">
+  <img src="https://render.gitanimals.org/lines/bnbong?pet-id=1" width="1000" height="120"/>
+</a>
