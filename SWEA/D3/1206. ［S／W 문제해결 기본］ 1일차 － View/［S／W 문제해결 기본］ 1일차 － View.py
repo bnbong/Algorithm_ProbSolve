@@ -36,21 +36,20 @@ print(f)                                문자열 1개 출력하는 예제
 #import sys
 #sys.stdin = open("input.txt", "r")
 
-for i in range(10):
+tc = 1
+
+for test_case in range(10):
     N = int(input())
-    heights = list(map(int, input().split()))
+    aparts = list(map(int, input().split()))
+    count = 0
+    for pivot in range(2, len(aparts)-2):
+        if aparts[pivot] > aparts[pivot-1] and aparts[pivot] > aparts[pivot - 2] and aparts[pivot] > aparts[pivot+1] and aparts[pivot] > aparts[pivot+2]:
+            w = [aparts[pivot-2], aparts[pivot-1], aparts[pivot], aparts[pivot+1], aparts[pivot+2]]
+            max_a = max(w)
+            w.remove(max_a)
+            next_a = max(w)
+            count += max_a - next_a
+    print(f"#{tc}", count)
+    tc += 1
 
-    candi = []
-
-    for j in range(2, len(heights)-2):
-        if heights[j] > heights[j-1] and heights[j] > heights[j-2] and heights[j] > heights[j+1] and heights[j] > heights[j+2]:
-            candi.append([heights[j], j])
-
-    result = 0
-
-    for c in candi:
-        topp = max(heights[c[1]-2], heights[c[1]-1], heights[c[1]+1], heights[c[1]+2])
-        result += (c[0]-topp)
-
-    print(f"#{i+1}", result)
-
+    
