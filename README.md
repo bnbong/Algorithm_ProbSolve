@@ -24,4 +24,4 @@ with grateful thanks to [백준 허브 (Baekjoon Hub)](https://github.com/Baekjo
   <img src="https://render.gitanimals.org/farms/bnbong"/>
 </a>
 
-[![codemaru card for bnbong](https://codemaru-9ynk4c8wh-bnbongs-projects.vercel.app/api/card.svg?github=bnbong&boj=bnbong&leetcode=bnbong)](https://github.com/bnbong)
+[![codemaru card for bnbong](https://codemaru.bnbong.com/api/card.svg?github=bnbong&boj=bnbong&leetcode=bnbong)](https://github.com/bnbong)
