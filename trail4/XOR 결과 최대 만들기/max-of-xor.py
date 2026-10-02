@@ -3,26 +3,31 @@ A = list(map(int, input().split()))
 
 # Please write your code here.
 
-answer = []
-result = []
+picked = []
 
-def combination(current_idx, count):
-    if count == m:
+max_number = -1
+
+def pick_number(curr_idx):
+    global max_number, picked
+
+    if len(picked) == m:
         _temp = 0
-        for item in answer:
+        for item in picked:
             _temp ^= item
-        result.append(_temp)
+
+        max_number = max(max_number, _temp)
         return
     
-    if current_idx == n:
+    if curr_idx >= len(A):
         return
+    
+    picked.append(A[curr_idx])
+    pick_number(curr_idx + 1)
+    picked.pop()
 
-    answer.append(A[current_idx])
-    combination(current_idx+1, count+1)
-    answer.pop()
+    pick_number(curr_idx + 1)
 
-    combination(current_idx+1, count)
+    return
 
-combination(0, 0)
-
-print(max(result))
+pick_number(0)
+print(max_number)
